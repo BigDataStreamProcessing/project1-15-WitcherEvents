@@ -106,7 +106,7 @@ Wyniki powinny zawierać, następujące kolumny:
 
 ## Zadanie 7
 
-Znajdź wszystkie przypadki, w których pojedynczy wiedźmin ze szkoły Mantikory (`Manticore`) wykonał serie co najmniej trzech zadań o poziomie trudności "Very Hard" i coraz większej wysokości zapłaty każdorazowo przekraczającej 100 sztuk złota. Seria taka musiała się zakończyć albo zleceniem o innej trudności, albo o wartości mniejszej niż poprzednia.
+Znajduj przypadki, w których pojedynczy wiedźmin ze szkoły Mantikory (`Manticore`) wykonał serie co najmniej trzech zadań o poziomie trudności "Very Hard" i coraz większej wysokości zapłaty każdorazowo przekraczającej 100 sztuk złota. Seria taka musiała się zakończyć albo zleceniem o innej trudności, albo o wartości mniejszej niż poprzednia.
 
 Wyniki powinny zawierać następujące kolumny:
 - `witcher` - wiedźmin wykonujący zadania

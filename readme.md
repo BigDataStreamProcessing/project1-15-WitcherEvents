@@ -80,7 +80,7 @@ Wyniki powinny zawierać, następujące kolumny:
 
 ## Zadanie 5
 
-Odszukaj wiedźminów, którzy w tym samym czasie mogą być uznani za doświadczonych i odważnych. Za doświadczonego Wiedźmina uważamy takiego, który wykonał serie co najmniej dwóch zadań o poziomie trudności "Very Hard" trwającą nie dłużej niż 10 sekund, a za odważnego, takiego, który wykonał zadanie o poziomie trudności "Lethal". Dodatkowo nagrody za wykonywane zadania mają być większe niż 25 sztuk złota.
+Odszukuj wiedźminów, którzy w tym samym czasie mogą być uznani za doświadczonych i odważnych. Za doświadczonego Wiedźmina uważamy takiego, który wykonał serie co najmniej dwóch zadań o poziomie trudności "Very Hard" trwającą nie dłużej niż 10 sekund, a za odważnego, takiego, który wykonał zadanie o poziomie trudności "Lethal". Dodatkowo nagrody za wykonywane zadania mają być większe niż 25 sztuk złota.
 
 Wyniki powinny zawierać, następujące kolumny:
 - `witcher` - nazwa wiedźmina

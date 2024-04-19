@@ -47,7 +47,7 @@ FROM WitcherEvent#ext_timed(java.sql.Timestamp.valueOf(its).getTime(), 3 sec);
 ```
 
 ## Zadanie 1
-Obliczaj sumy zarobionego złota przez poszczególne szkoły wiedźmińskie w ciągu ostatniej minuty (czasu systemowego).
+Obliczaj sumy zarobionego złota przez poszczególne szkoły wiedźmińskie w ciągu ostatniej minuty.
 
 Wyniki powinny zawierać, następujące kolumny:
 - `school` - nazwa szkoły

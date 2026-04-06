@@ -97,39 +97,48 @@ Wiedźmini podróżują i wykonują różnorodne zadania, aby zarobić złoto.
 Każde zadanie posiada m.in. poziom trudności, lokalizację oraz wiedźmina, 
 który je wykonał. 
 
-Wykrywaj pary odbioru nagród, za zlecenia w ciągu ostatnich 5 minut tego 
-samego wiedźmina o tym samym poziomie trudności i w tej samej lokalizacji 
-oraz oblicz różnicę zapłaty otrzymaną za te dwa zadania.
+Wśród obiorów nagród zarejestrowanych w ciągu ostatnich 5 minut, wykrywaj 
+pary `A` i `B` dotyczące tego samego wiedźmina, o tego samego poziomu trudności 
+i tej samej lokalizacji. 
+Aby uniknąć duplikatów par `A-B` oraz `B-A`, łącz ze sobą te odbiory nagród, w których 
+rejestracja odbioru `A` miała miejsce przed rejestracją odbioru `B` 
+(zakładamy, że w tym samym momencie odbiory nagród przez tego samego 
+wiedźmina nie występują).
 
 Wyniki powinny zawierać, następujące kolumny:
 - `witcher` - nazwa wiedźmina
 - `difficulty_level` - poziom trudności zadania
 - `location` - lokalizacja zadania
-- `difference` - różnica w zapłacie otrzymanej za zadania
+- `difference` - różnica w zapłacie otrzymanej za zadania (`A.payment-B.payment`)
 
 ## Zadanie 5
 
-Za *doświadczonego* Wiedźmina uważamy takiego, 
-który wykonał serie co najmniej dwóch zadań o poziomie trudności 
-`Very Hard` zarejestrowanych w okresie nie dłuższym niż 10 sekund
-(czas pomiędzy rejestracją pierwszego i ostatniego zdarzenia w serii).
-Natomiast za *odważnego* Wiedźmina uważamy takiego, który wykonał 
-zadanie o poziomie trudności `Lethal` za więcej niż 25 sztuk złota.
+Rejestracja odbioru nagród przez tego samego wiedźmina 
+obejmująca co najmniej dwa zadania o poziomie 
+trudności `Very Hard` w okresie nie dłuższym niż 10 sekund
+(czas pomiędzy rejestracją pierwszego i ostatniego zdarzenia) 
+tworzy fazę Wiedźmina *doświadczonego*.
+Za *odważnego* Wiedźmina uważamy takiego, który zarejestrował 
+odbiór nagród za zadanie o poziomie trudności `Lethal` za 
+więcej niż 25 sztuk złota.
 
-Odszukuj wiedźminów, którzy w okresie trwania serii wiedźmina 
-*doświadczonego* zarejestrowali zadanie wiedźmina *odważnego*
+Odszukuj wiedźminów, którzy w czasie trwania fazy wiedźmina 
+*doświadczonego* zarejestrowali zadanie wiedźmina *odważnego*.
+
+Uwaga! Fazy Wiedźmina doświadczonego nie mogą współdzielić żadnego zdarzenia.
 
 Wyniki powinny zawierać, następujące kolumny:
 - `witcher` - nazwa wiedźmina
-- `start_its` - czas rejestracji pierwszego z zadań serii wiedźmina *doświadczonego*
-- `end_its` - czas rejestracji ostatniego z zadań serii wiedźmina *doświadczonego*
+- `start_its` - czas rejestracji pierwszego z zadań fazy wiedźmina *doświadczonego*
+- `end_its` - czas rejestracji ostatniego z zadań fazy wiedźmina *doświadczonego*
 - `brave_its` - czas rejestracji zadania wiedźmina *odważnego*
 
 ## Zadanie 6
 
-Znajduj przypadki, w wykonane zostały trzy zadania o poziomie 
-trudności `Hard` na tego samego potwora. Dodatkowo spełnione 
-muszą być następujące warunki:
+Znajduj przypadki, trzech kolejnych rejestracji odbiorów nagród za 
+zadania o poziomie trudności `Hard` na tego samego potwora, 
+bez ograniczenia czasowego pomiędzy rejestracjami. 
+Raportuj takie trójki zadań, które spełniają następujące warunki:
 
 - *Zadanie 1.* - o wartości co najmniej 50 sztuk złota,
 - *Zadanie 2.* - o wartości większej niż wartość w zadaniu 1,
@@ -148,10 +157,11 @@ Wyniki powinny zawierać, następujące kolumny:
 ## Zadanie 7
 
 Znajduj przypadki, w których pojedynczy wiedźmin ze szkoły 
-Mantikory (`Manticore`) wykonał serie co najmniej trzech zadań 
-o poziomie trudności "Very Hard" i coraz większej wysokości 
-zapłaty każdorazowo przekraczającej 100 sztuk złota. 
-Seria taka musiała się zakończyć albo zleceniem o innej trudności, 
+Mantikory (`Manticore`) zarejestrował serie co najmniej trzech 
+odbiorów nagród za zadania 
+o poziomie trudności "Very Hard" o wartości przekraczającej za każdym razem 100 sztuk 
+złota oraz każdorazowo o większej wysokości zapłaty niż odbiór poprzedni.  
+Seria taka musiała się zakończyć przed zleceniem albo o innej trudności, 
 albo o wartości nie większej niż poprzednia.
 
 W wyniku umieszczamy informacje dotyczące pierwszych trzech zdarzeń.

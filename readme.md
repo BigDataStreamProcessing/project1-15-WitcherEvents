@@ -125,8 +125,6 @@ więcej niż 25 sztuk złota.
 Odszukuj wiedźminów, którzy w czasie trwania fazy wiedźmina 
 *doświadczonego* zarejestrowali zadanie wiedźmina *odważnego*.
 
-Uwaga! Fazy Wiedźmina doświadczonego nie mogą współdzielić żadnego zdarzenia.
-
 Wyniki powinny zawierać, następujące kolumny:
 - `witcher` - nazwa wiedźmina
 - `start_its` - czas rejestracji pierwszego z zadań fazy wiedźmina *doświadczonego*
